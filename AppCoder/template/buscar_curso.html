@@ -1,0 +1,21 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block seccion %}
+<h1>Buscar Cursos</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<h2>Ingrese el Curso</h2>
+
+    <form action="buscar" method="GET">
+        {% csrf_token %}
+        <p>Nombre</p>
+        <input type="text" name="nombre" required>
+
+        <input type="submit">
+    </form>
+
+{% endblock %}
